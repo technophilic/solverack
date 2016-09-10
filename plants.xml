@@ -1,0 +1,39 @@
+<inp id="inp"><pre>Number of plants
+Id and height of each plant.</pre></inp>
+<oup id="oup"><pre>Print the keys of the dictionary one per line.
+</pre></oup>
+<proc id="proc"><pre>Store the data in a dictionary.
+Sort dictionary by value</pre></proc>
+<alt id="alt"><pre>This Code can be replaced with lambda function and ordered dict function:
+
+OrderedDict(sorted(d.items(), key=lambda t: t[1]))
+
+Print keys of d </pre></alt>
+<pseudo id="pseudo"><pre>Start
+Read number of plants
+If all inputs are positive
+Read ID and height of the plants
+Store the values of dictionary in Lid
+Sort Lid
+Append values of the keys corresponding to the values of sorted Lid in ‘key’
+Print keys one per line
+Stop</pre></pseudo>
+<code id="code"><pre>n=int(input())
+if(n>=0):
+	d={}
+	for i in range(0,n):
+		ID=input()
+		h=int(input())
+		d[ID]=h
+	Lid=list(d.values())
+	Lid.sort()
+	key=list()
+	for i in range(0,len(Lid)):
+		for x in d.keys():
+			if(d[x]==Lid[i]):
+				key.append(x)
+				break
+	for x in key:
+		print(x)
+</pre></code>
+
