@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         Inject 2.0
 // @namespace    http://tampermonkey.net/
-// @version      0.1
-// @description  shows how to use babel compiler
+// @version      2.0
+// @description  HTML 5 injection for SolveRack
 // @author       Vineeth
 // @require      https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.6.15/browser-polyfill.min.js
 // @require      https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.6.15/browser.min.js
