@@ -18,7 +18,7 @@ var inline_src = (<><![CDATA[
     if (window.top === window.self) {
     //--- Script is on domain_B.com when/if it is the MAIN PAGE.
     }
-    else {
+    {
     var inp=`
 Number of plants
 Id and height of each plant.
@@ -33,7 +33,7 @@ Print the keys of the dictionary one per line.
     var alt=`
 This Code can be replaced with lambda function and ordered dict function:
 OrderedDict(sorted(d.items(), key=lambda t: t[1]))
-Print keys of d 
+Print keys of d
 `;
     var pseudo =`
 Read number of plants
@@ -44,6 +44,26 @@ Sort Lid
 Append values of the keys corresponding to the values of sorted Lid in ‘key’
 Print keys one per line
 Stop
+`;
+    var code=`
+n=int(input())
+if(n>=0):
+d={}
+for i in range(0,n):
+ID=input()
+h=int(input())
+d[ID]=h
+Lid=list(d.values())
+Lid.sort()
+key=list()
+for i in range(0,len(Lid)):
+for x in d.keys():
+if(d[x]==Lid[i]):
+key.append(x)
+break
+for x in key:
+print(x)
+
 `;
     //--- Script is on  skillrack.com when/if it is IN AN IFRAME.
     alert("Collaborative Coding Activated !!");
@@ -61,8 +81,10 @@ Stop
 
     var pseudoc=d.getElementById("j_id_1z");                        //Psuedo
     pseudoc.innerHTML=pseudo;
-    }
 
+    var codec=d.d.getElementById("txtCode");
+    codec=code;
+    }
     /* jshint ignore:start */
 ]]></>).toString();
                   var c = babel.transform(inline_src);
